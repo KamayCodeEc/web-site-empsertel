@@ -1,5 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+const google_maps_api_key = import.meta.env.GOOGLE_MAPS_API_KEY;
 ---
 
 <Layout>
@@ -133,7 +134,7 @@ import Layout from "~/layouts/Layout.astro";
     <div id="map"></div>
 </Layout>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAG6lz--d0ypidC9CIwfRtxZd_GDGJKYo&callback=initMap" async defer></script>
+<script src=`https://maps.googleapis.com/maps/api/js?key=${google_maps_api_key}&callback=initMap` async defer></script>
 
 <script is:inline>
     var map;
