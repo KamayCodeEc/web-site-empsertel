@@ -1,0 +1,131 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+    <div class="page-banner-wrap text-center bg-cover" style="background-image: url('/assets/img/page-banner.jpg')">
+        <div class="container">
+            <div class="page-heading text-white">
+                <h1>Our Services</h1>
+            </div>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href={`/${lang}`}>Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <section class="our-service-wrapper section-padding">
+        <div class="container">
+            <div class="col-12 col-xl-6 offset-xl-3 text-center">
+                <div class="section-title style-2">
+                    <span>Empsertel S.A</span>
+                    <h2>We help you build and grow your business</h2>
+                </div>
+            </div>
+            <div class="row ps-xl-5 pe-xl-5">
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/despliegue-de-red.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/network`}>Network Deployment</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">The Site Acquisition service has been provided to our Client INMOAVILES S A at a National Level, being a reliable and quality service.</p>
+                        <a href={`/${lang}/services/network`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/ingenieria-rf.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/rf`}>RF Engineering</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">The Comment Translate server crashed 5 times in the last 3 minutes. The server will not be restarted.</p>
+                        <a href={`/${lang}/services/rf`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/calidad.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/call`}>Call P</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">Service focused on verifying the operability and correct functioning of Voice services.</p>
+                        <a href={`/${lang}/services/call`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/operacion-y-mantenimiento.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/op`}>Operation and Maintenance</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">Service that identifies the origin of external signals in 2G/3G/LTE cellular band frequencies that affect the performance and behavior of base stations (RBS).</p>
+                        <a href={`/${lang}/services/op`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/consultoria-rf.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/consulting`}>RF Consulting</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">Network optimization by KPI’s Analysis and parameterization recommendations after Drive test.</p>
+                        <a href={`/${lang}/services/consulting`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/infraestructura.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/infra`}>Infrastructure</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">Service focused on the installation of 3G and LTE Nodes, with Ericsson SSC 02 RBS 6601 Nokia, Alcatel equipment.</p>
+                        <a href={`/${lang}/services/infra`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/fibra-optica.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/optical`}>Optical fiber</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">We have staff responsible for managing structured cabling projects, maintenance, repair and installation.</p>
+                        <a href={`/${lang}/services/optical`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/obra-civil.svg" alt="">
+                        </div>
+                        <h4><a href={`/${lang}/services/civil`}>Civil Works</a></h4>
+                        <p class="text-truncate" style="max-width: 100%;">We manage the Minor Civil Works Services project for Telefónica, another of our clients is PUNTONET, which has entrusted us with the Civil Works Maintenance Project for the Tx nodes.</p>
+                        <a href={`/${lang}/services/civil`} class="read-more-link">Read more</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</Layout>
+
+
+
+
+
+
+

@@ -1,0 +1,290 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+	<section class="hero-wrapper hero-1 text-center text-md-start">
+        <div class="hero-slider-active">
+            <div class="single-slide">
+                <div class="slide-bg bg-cover wow zoomIn" style="background-image: url('/assets/img/home1/antena_1.jpg');"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-xxl-8 col-lg-9 col-sm-10">
+                            <div class="hero-contents pe-lg-3 text-white">
+                                <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.3">TELECOMMUNICATION SERVICES</h1>
+                                <p class="pe-lg-5 mb-4 animated" data-animation-in="fadeInRight" data-delay-in="0.6">Focused on being a strategic ally in the Mobile Telecommunications sector, it provides Network and Infrastructure Services that operate in different areas.</p>
+                                <a href={`/${lang}/contact`} data-animation-in="fadeInRight" data-delay-in="0.9" class="theme-btn me-sm-4 mt-4 animated">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="single-slide">
+                <div class="slide-bg bg-cover wow zoomIn" style="background-image: url('/assets/img/home1/cableado_1.jpg');"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-xxl-8 col-lg-9 col-sm-10">
+                            <div class="hero-contents pe-lg-3 text-white">
+                                <h1 class="fs-lg animated" data-animation-in="fadeInRight" data-delay-in="0.3">TELECOMMUNICATION SERVICES</h1>
+                                <p class="pe-lg-5 mb-4 animated" data-animation-in="fadeInRight" data-delay-in="0.6">Focused on being a strategic ally in the Mobile Telecommunications sector, it provides Network and Infrastructure Services that operate in different areas.</p>
+                                <a href={`/${lang}/contact`} data-animation-in="fadeInRight" data-delay-in="0.9" class="theme-btn me-sm-4 mt-4 animated">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+                <circle r="20" cy="22" cx="22" id="quantechcircle" />
+            </symbol>
+        </svg>
+    </section>
+
+    <section class="our-service-wrapper section-padding">
+        <div class="container">
+            <div class="col-12 col-xl-6 offset-xl-3 text-center">
+                <div class="section-title style-2">
+                    <h6>Aligned to meet your goals</h6>
+                    <h2>We help you build and grow your business.</h2>
+                </div>
+            </div>
+            <div class="row ps-xl-5 pe-xl-5">
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/analisis.png" alt="analisis">
+                        </div>
+                        <h4>Analysis</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/asesoramiento.png" alt="asesoramiento">
+                        </div>
+                        <h4>Advice</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/integracion.png" alt="integracion">
+                        </div>
+                        <h4>Integration</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="single-service-box">
+                        <div class="icon">
+                            <img src="/assets/img/icons/seguimiento.png" alt="seguimiento">
+                        </div>
+                        <h4>Follow-up</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-wrapper section-padding pt-0">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-lg-6 col-12">
+                    <div class="about-img-funfact-content me-xl-3">
+                        <img src="/assets/img/about-img.jpg" class="img-round" alt="">
+                        <div class="fun-fact-bar wow fadeInDown">
+                            <div class="year-img">
+                                <h3>10</h3>
+                                <img src="/assets/img/icons/award.png" alt="award">
+                            </div>
+                            <p>Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12 mt-5 mt-lg-0 ps-xl-5">
+                    <div class="section-title style-2">
+                        <h6>About Our Company</h6>
+                        <h2>We are experts in infrastructure and network and communications services</h2>
+                        <p>We are always adapting our services to the latest technology to achieve secure, efficient, profitable and highly available infrastructures. With our IT professionals, you will have a solid infrastructure tailored to your needs.</p>
+                    </div>
+                    <a href={`/${lang}/about`} class="theme-btn mt-30">Read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="funfact-box-wrapper section-padding bg-cover" style="background-image: url('/assets/img/funfact-bg.jpg')">
+        <div class="container">
+            <div class="row text-center mtm-30 text-white">
+                <div class="col-md-6 col-lg-4">
+                    <div class="single-digit-count">
+                        <div class="icon">
+                            <img src="/assets/img/icons/users.svg" alt="">
+                        </div>
+                        <div class="digits"><span>50</span>+</div>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single-digit-count">
+                        <div class="icon">
+                            <img src="/assets/img/icons/task-complete.svg" alt="">
+                        </div>
+                        <div class="digits"><span>100</span>+</div>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="single-digit-count">
+                        <div class="icon">
+                            <img src="/assets/img/icons/star.svg" alt="">
+                        </div>
+                        <div class="digits"><span>20</span>+</div>
+                        <p>Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="best-services-wrapper section-padding bg-cover" style="background-image: url('/assets/img/services-bg.jpg')">
+        <div class="container">
+            <div class="col-12 col-xl-6 offset-xl-3 col-md-8 offset-md-2 text-center">
+                <div class="section-title style-2">
+                    <h6>Our Services</h6>
+                    <h2>We offer a wide variety of services in the Telecommunications area</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp">
+                        <div class="icon">
+                            <img src="/assets/img/icons/test_drive.png" alt="test_drive">
+                        </div>
+                        <div class="content">
+                            <h4><a href="#">Drive Test</a></h4>
+                            <p>Drive Test and static test execution service at a national level for the evaluation of GSM, UMTS and LTE technologies in the respective operating bands of national operators.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp" data-wow-delay=".2s">
+                        <div class="icon">
+                            <img src="/assets/img/icons/obra_civil.png" alt="obra_civil">
+                        </div>
+                        <div class="content">
+                            <h4><a href="#">Civil Works</a></h4>
+                            <p>We manage the Minor Civil Works Services project for Telefónica, another of our clients is PUNTONET, which has entrusted us with the Civil Works Maintenance Project for the Tx nodes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp" data-wow-delay=".4s">
+                        <div class="icon">
+                            <img src="/assets/img/icons/cableado_estructural.png" alt="cableado_estructural">
+                        </div>
+                        <div class="content">
+                            <h4><a href="#">Structured Cabling</a></h4>
+                            <p>Structured cabling projects, maintenance, repair and installation of last mile projects, GPON networks made with Optical Fiber and/or Copper.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-50 text-center">
+                <a href={`/${lang}/services`} class="theme-btn">All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-carousel-wrapper pb-5 section-padding">
+        <div class="container">
+            <div class="row align-center">
+                <div class="col-md-8 col-xl-6 text-center text-md-start">
+                    <div class="section-title style-2">
+                        <h6>Our Completed Projects</h6>
+                        <h2>Improve and enhance our technological projects</h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xl-6">
+                    <div class="case-study-carousel-arrow text-md-end">
+                        <div class="project-carousel-nav-prev me-2"><i class="fa fa-arrow-left"></i></div>
+                        <div class="project-carousel-nav-next"><i class="fa fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-showcase-carousel-active text-white">
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/auditoria.jpg')">
+                    <div class="content">
+                        <h3>2G 3G 4G Audit</h3>
+                    </div>
+                </div>
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/radio_base.jpg')">
+                    <div class="content">
+                        <h3>Base Radio Installation</h3>
+                    </div>
+                </div>
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/radiente.jpeg')">
+                    <div class="content">
+                        <h3>Radiant System Installation</h3>
+                    </div>
+                </div>
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/project4.jpg')">
+                    <div class="content">
+                        <h3>Text 1</h3>
+                    </div>
+                </div>
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/project5.jpg')">
+                    <div class="content">
+                        <h3>Text 2</h3>
+                    </div>
+                </div>
+                <div class="single-project-card bg-cover" style="background-image: url('/assets/img/project/project6.jpg')">
+                    <div class="content">
+                        <h3>Text 3</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-50 text-center">
+                <a href={`/${lang}/projects`} class="theme-btn">All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-carousel-wrapper section-padding pt-5">
+        <div class="container">
+            <div class="col-12 col-xl-8 offset-xl-2 text-center">
+                <div class="section-title style-2">
+                    <h6>Our Clients</h6>
+                    <h2>We work for brands and companies at national and international level.</h2>
+                </div>
+            </div>
+
+            <div class="testimonial-carousel-grid-active">
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/telefonica.jpg" alt="telefonica">
+                </div>
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/inmoviales.jpg" alt="inmoviales">
+                </div>
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/tower.jpg" alt="tower">
+                </div>
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/bts.jpg" alt="bts">
+                </div>
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/punto_net.jpg" alt="punto_net">
+                </div>
+                <div class="single-testimonial-card">
+                    <img src="/assets/img/clients/phoenix-tower.jpeg" alt="phoenix-tower">
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

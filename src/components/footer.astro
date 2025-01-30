@@ -1,0 +1,153 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="cta-banner-wrapper">
+    <div class="container">
+        <div class="cta-banner-box section-padding bg-cover" style="background-image: url('/assets/img/cta-banner-bg.jpeg')">
+            <div class="row align-center">
+                <div class="col-xl-7 text-center text-xl-start offset-xl-1 offset-xl-1">
+                    <div class="section-title mb-0">
+                        <span>{t('banner.title')}</span>
+                        <h2 class="mb-md-0">{t('banner.subtitle')}</h2>
+                    </div>
+                </div>
+                <div class="col-xl-4 mt-4 mt-xl-0 text-center">
+                    <a href="/contact" class="theme-btn">{t('banner.btn')}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-1 footer-wrap">
+    <div class="footer-widgets-wrapper text-white bg-cover" style="background-image: url('/assets/img/footer-widgets-bg.png')">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="about-quantech pe-md-5 pe-xl-0">
+                        <a href="/">
+                            <img src="/assets/img/logo-footer.png" alt="empsertel">
+                        </a>
+                        <p>{t('footer.slogan')}</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single-footer-wid ps-xl-5">
+                        <div class="wid-title">
+                            <h3>{t('footer.info')}</h3>
+                        </div>
+                        <ul>
+                            <li><a href={`/${lang}`}>{t('nav.home')}</a> </li>
+                            <li><a href={`/${lang}/about`}>{t('nav.about')}</a> </li>
+                            <li><a href={`/${lang}/projects`}>{t('nav.projects')}</a></li>
+                            <li><a href={`/${lang}/contact`}>{t('nav.contact')}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single-footer-wid ps-xl-2">
+                        <div class="wid-title">
+                            <h3>{t('footer.services')}</h3>
+                        </div>
+                        <ul>
+                            <li><a href={`/${lang}/services/network`}>{t('nav.services.network')}</a></li>
+                            <li><a href={`/${lang}/services/rf`}>{t('nav.services.rf')}</a></li>
+                            <li><a href={`/${lang}/services/call`}>{t('nav.services.call')}</a></li>
+                            <li><a href={`/${lang}/services/consulting`}>{t('nav.services.consulting')}</a></li>
+                            <li><a href={`/${lang}/services/op`}>{t('nav.services.op')}</a></li>
+                            <li><a href={`/${lang}/services/infra`}>{t('nav.services.infra')}</a></li>
+                            <li><a href={`/${lang}/services/optical`}>{t('nav.services.optical')}</a></li>
+                            <li><a href={`/${lang}/services/civil`}>{t('nav.services.civil')}</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="single-footer-wid site-info-widget">
+                        <div class="wid-title">
+                            <h3>{t('footer.contact')}</h3>
+                        </div>
+                        <div class="get-in-touch">
+                            <div class="single-contact-info">
+                                <div class="icon id3">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span>administracion@empsertel.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wid-title">
+                            <h3>{t('footer.addr')}</h3>
+                        </div>
+                        <div class="get-in-touch">
+                            <div class="single-contact-info">
+                                <div class="icon id1">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span>EMPSERTEL NETWORK LLC</span>
+                                    <span>7901 4th ST N STE 300 ST Petersburg, FL 33702. EEUU</span>
+                                </div>
+                            </div>
+                            <div class="single-contact-info">
+                                <div class="icon id1">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span>EMPSERTEL NETWORK S.A</span><br>
+                                    <span>Av. Jose Drom e4-22 y Pereira Esquina Edificio Iñaquito II Oficina 603. Quito-Ecuador</span>
+                                </div>
+                            </div>
+                            <div class="single-contact-info">
+                                <div class="icon id1">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span>EMPSERTEL NETWORK S.A</span><br>
+                                    <span>Puente Piedra Urb. Las Piedras Cal 8, Lote 13. Lima-Perú</span>
+                                </div>
+                            </div>
+                            <div class="single-contact-info">
+                                <div class="icon id1">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-info">
+                                    <span>EMPSERTEL NETWORK S.A</span><br>
+                                    <span>Calle 128B N56 A 53, Barrio las Villas. Bogotá-Colombia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container align-items-center">
+            <div class="bottom-content-wrapper">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="copy-rights">
+                            <p>&copy;2023 <strong>Empsertel Network S.A. </strong>All Rights Reserved. Designed by <a href="https://www.kamaycode.com.ec/"><strong>Kamay Code</strong></a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-2 mt-md-0 col-12 text-md-end">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Empsertel-SA-111248173653051"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/empsertel"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/empsertel-network"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

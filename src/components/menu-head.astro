@@ -1,0 +1,128 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const flag = lang === "es" ? "es" : lang === "en" ? "us" : "es";
+
+---
+
+<header class="header-1">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-3 col-sm-5 col-md-4 col-6 pr-lg-5">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/assets/img/logo.svg" alt="empsertel">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 text-end p-lg-0 d-none d-lg-flex justify-content-between align-items-center">
+                <div class="menu-wrap">
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href={`/${lang}`}>{t('nav.home')}</a> </li>
+                            <li><a href={`/${lang}/about`}>{t('nav.about')}</a> </li>
+                            <li><a href={`/${lang}/services`}>{t('nav.services')} <i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href={`/${lang}/services/network`}>{t('nav.services.network')}</a></li>
+                                    <li><a href={`/${lang}/services/rf`}>{t('nav.services.rf')}</a></li>
+                                    <li><a href={`/${lang}/services/call`}>{t('nav.services.call')}</a></li>
+                                    <li><a href={`/${lang}/services/consulting`}>{t('nav.services.consulting')}</a></li>
+                                    <li><a href={`/${lang}/services/op`}>{t('nav.services.op')}</a></li>
+                                    <li><a href={`/${lang}/services/infra`}>{t('nav.services.infra')}</a></li>
+                                    <li><a href={`/${lang}/services/optical`}>{t('nav.services.optical')}</a></li>
+                                    <li><a href={`/${lang}/services/civil`}>{t('nav.services.civil')}</a></li>
+                                </ul>
+                            </li>
+                            <li><a href={`/${lang}/projects`}>{t('nav.projects')}</a></li>
+                            <li><a href={`/${lang}/contact`}>{t('nav.contact')}</a></li>
+                            <li>
+                                <a href={`/${lang}/services`}>
+                                    <span class={`flag-icon flag-icon-${flag} flag-icon-round`}></span>
+                                    <i class="fa fa-angle-down"></i></a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/es"><span class="flag-icon flag-icon-es flag-icon-round"></span> Español</a>
+                                    </li>
+                                    <li>
+                                        <a href="/en"><span class="flag-icon flag-icon-us flag-icon-round"></span> English</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="d-block d-lg-none col-sm-1 col-md-8 col-6">
+                <div class="mobile-nav-wrap">
+                    <div id="hamburger"><i class="fa fa-bars"></i></div>
+                    <!-- mobile menu - responsive menu  -->
+                    <div class="mobile-nav">
+                        <button type="button" class="close-nav">
+                            <i class="fa fa-times-circle"></i>
+                        </button>
+                        <nav class="sidebar-nav">
+                            <ul class="metismenu" id="mobile-menu">
+                                <li><a href={`/${lang}`}>{t('nav.home')}</a> </li>
+                                <li><a href={`/${lang}/about`}>{t('nav.about')}</a> </li>
+                                <li><a href={`/${lang}/services`}>{t('nav.services')} <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href={`/${lang}/services/network`}>{t('nav.services.network')}</a></li>
+                                        <li><a href={`/${lang}/services/rf`}>{t('nav.services.rf')}</a></li>
+                                        <li><a href={`/${lang}/services/call`}>{t('nav.services.call')}</a></li>
+                                        <li><a href={`/${lang}/services/consulting`}>{t('nav.services.consulting')}</a></li>
+                                        <li><a href={`/${lang}/services/op`}>{t('nav.services.op')}</a></li>
+                                        <li><a href={`/${lang}/services/infra`}>{t('nav.services.infra')}</a></li>
+                                        <li><a href={`/${lang}/services/optical`}>{t('nav.services.optical')}</a></li>
+                                        <li><a href={`/${lang}/services/civil`}>{t('nav.services.civil')}</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href={`/${lang}/projects`}>{t('nav.projects')}</a></li>
+                                <li><a href={`/${lang}/contact`}>{t('nav.contact')}</a></li>
+                                <li>
+                                    <a href={`/${lang}/services`}>
+                                        <span class={`flag-icon flag-icon-${flag} flag-icon-round`}></span>
+                                        <i class="fa fa-angle-down"></i></a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="/es"><span class="flag-icon flag-icon-es flag-icon-round"></span> Español</a>
+                                        </li>
+                                        <li>
+                                            <a href="/en"><span class="flag-icon flag-icon-us flag-icon-round"></span> English</a>
+                                        </li>
+    
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="action-bar text-white">
+                            <div class="single-info-element">
+                                <div class="icon">
+                                    <i class="fa fa-map-marked-alt"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>{t('dic.direc')} :</h5>
+                                    <span>Av. Jose Drom e4-22 y Pereira Esquina Edificio Iñaquito II Oficina 603. Quito-Ecuador</span>
+                                </div>
+                            </div>
+                            <div class="single-info-element">
+                                <div class="icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <div class="text">
+                                    <h5>{t('dic.email')} :</h5>
+                                    <span>administracion@empsertel.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+</header>

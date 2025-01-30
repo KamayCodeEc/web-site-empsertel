@@ -1,0 +1,93 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+    <div class="page-banner-wrap text-center bg-cover" style="background-image: url('/assets/img/page-banner.jpg')">
+        <div class="container">
+            <div class="page-heading text-white">
+                <h1>Learn More About Us</h1>
+            </div>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href={`/${lang}`}>Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+        <section class="about-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-12">
+                    <div class="about-images-video-popup mb-5 mb-md-0">
+                        <img src="assets/img/home1/about1.jpg" alt="">
+                        <img src="assets/img/home1/about2.jpg" alt="">
+                        <div class="video-play-btn">
+                            <a href="https://www.youtube.com/watch?v=6k-xdzWnMEw" class="popup-video play-video"><i class="fa fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-12 ps-xl-5">
+                    <div class="section-title style-2">
+                        <span>More than 10 years of experience</span>
+                        <h2>We are experts in network and communications infrastructure and services</h2>
+                        <p>We are always adapting our services to the latest technology to achieve secure, efficient, profitable and highly available infrastructures. With our IT professionals, you will have a solid infrastructure tailored to your needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="best-services-wrapper section-padding bg-cover" style="background-image: url('/assets/img/services-bg.jpg')">
+        <div class="container">
+            <div class="col-12 col-xl-6 offset-xl-3 col-md-8 offset-md-2 text-center">
+                <div class="section-title style-2">
+                    <h6>What you need to know about</h6>
+                    <h2>Empsertel Network S.A.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp">
+                        <div class="icon">
+                            <img src="/assets/img/icons/vision.png" alt="vision">
+                        </div>
+                        <div class="content">
+                            <h4><a>Vision</a></h4>
+                            <p>To be a leading company in the market, becoming the strategic partner of our Clients, providing our services nationwide with quality results through human development, the application and administration of technology that contributes to improving our services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp" data-wow-delay=".2s">
+                        <div class="icon">
+                            <img src="/assets/img/icons/mision.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4><a>Mission</a></h4>
+                            <p>Ser una empresa proveedora de Servicios de Red e Infraestructura caracterizada por su alto nivel técnico, competitivo y de crecimiento, proporcionando soluciones tecnológicas acorde a las expectativas de nuestros Clientes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-12">
+                    <div class="single-service-top-icon wow fadeInUp" data-wow-delay=".4s">
+                        <div class="icon">
+                            <img src="/assets/img/icons/valores.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h4><a>Values</a></h4>
+                            <p>
+                                – Honesty <br> – Integrity <br> – Commitment <br> – Professionalism <br> – Results <br> – Social Responsibility
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
